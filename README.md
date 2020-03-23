@@ -42,5 +42,5 @@ https://medium.com/@frank_lemanschik/is-it-all-about-the-package-manager-4307763
 
 ## What will Open-PWA Solve?
 It will provide a ecosystem for a total new concept to deploy existing PWA's to diffrent Platforms then the Browser as also 
-New Concepts for Live Updates and Deployments of existing Applications Running. This is research on the new Container Caps
+New Concepts for Live Updates and Deployments PSSA - Progressive Server Side Applications maybe it will be called PSSS - Progressive Server Side Services. of existing Applications Running. This is research on the new Container Caps
 of wasm also.
