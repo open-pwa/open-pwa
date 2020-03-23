@@ -34,9 +34,10 @@ https://medium.com/@frank_lemanschik/is-it-all-about-the-package-manager-4307763
 - open-pwa runtime runs on a remote host or the local desktop pc
 - It offers a service worker deployment interface
 - It offers all browser related API's for PWA's like storage and others
-- First Implamentations
-  - nodejs+es-permissions can be used for the first implamentation
-  - upwa rust + wasmer + deno
+- First Implamentations JS+WASM
+  - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
+  - [upwa](https://github.com/direktspeed/upwa) rust + wasmer + deno
+  - [uwasi](https://github.com/direktspeed/uwasi) offers wasmer-js Platform bindings.
   - graalvm and also node-graalvm
 
 
