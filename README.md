@@ -2,7 +2,16 @@
 An OpenSource Project to research and offer the ability to Port PWA Concepts to any Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
 ## News 
-cordova-webserver-plugin as a 
+
+
+
+
+
+## Current backend Runtime Integrations
+- [ ] cordova-webserver-plugin
+- [ ] deno
+- [ ] docker
+- [ ] nodejs
 
 
 
