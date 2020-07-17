@@ -3,6 +3,9 @@ An OpenSource Project to research and offer the ability to Port PWA Concepts to 
 
 ## News 
 
+### 17.07.2020
+Google Created Project Carlo that will eliminate the most biggest problems of electron (the packaging of chrome) we will use it as the fundation to allow desktop apps as it is using simply JS+pupeteer(Browser Control) it is a good fit while it solves not all problems that we solve as for example open-pwa:// integration it is a big game changer "the idea is amazing i am shoked that i did not have it" Quoted from Frank Lemanschik
+- https://github.com/GoogleChromeLabs/carlo
 
 
 
@@ -12,6 +15,7 @@ An OpenSource Project to research and offer the ability to Port PWA Concepts to 
 - [ ] deno
 - [ ] docker
 - [ ] nodejs
+- [ ] wasmer
 
 
 
