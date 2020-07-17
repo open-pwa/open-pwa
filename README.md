@@ -4,7 +4,11 @@ An OpenSource Project to research and offer the ability to Port PWA Concepts to 
 ## News 
 
 ### 17.07.2020
-Google Created Project Carlo that will eliminate the most biggest problems of electron (the packaging of chrome) we will use it as the fundation to allow desktop apps as it is using simply JS+pupeteer(Browser Control) it is a good fit while it solves not all problems that we solve as for example open-pwa:// integration it is a big game changer "the idea is amazing i am shoked that i did not have it" Quoted from Frank Lemanschik
+Google Created Project Carlo that will eliminate the most biggest problems of electron (the packaging of chrome) we will use it as the fundation to allow desktop apps as it is using simply JS+pupeteer(Browser Control) it is a good fit while it solves not all problems that we solve as for example open-pwa:// integration it is a big game changer 
+
+"the idea is amazing i am shoked that i did not have it" Quoted from Frank Lemanschik
+
+There is a discussion in https://news.ycombinator.com/item?id=18355345 which shows that Open-PWA is still the way to go as it manages the nodejs or serverside dependency while chrome manages updates it self.
 - https://github.com/GoogleChromeLabs/carlo
 
 
@@ -64,3 +68,11 @@ https://medium.com/@frank_lemanschik/is-it-all-about-the-package-manager-4307763
 It will provide a ecosystem for a total new concept to deploy existing PWA's to diffrent Platforms then the Browser as also 
 New Concepts for Live Updates and Deployments PSSA - Progressive Server Side Applications maybe it will be called PSSS - Progressive Server Side Services. of existing Applications Running. This is research on the new Container Caps
 of wasm also.
+
+
+## The NodeJS Auto Update Problem
+- if you run nodejs via docker you will never have it as you can replace the nodejs version
+- if you use the curl -L https://git.io/n-install | bash or brew install n
+  - n latest && node your-app.js 
+- (Windows) https://github.com/coreybutler/nvm-windows 
+- https://github.com/android-js/androidjs/ (nodejs-bindings for android)
