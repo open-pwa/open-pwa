@@ -1,0 +1,29 @@
+{
+  "name": "systeminfo-app",
+  "version": "0.9.0",
+  "description": "System info example",
+  "main": "main.js",
+  "scripts": {
+    "bundle": "pkg package.json",
+    "start": "node main.js",
+    "test": "node test.js"
+  },
+  "bin": {
+    "systeminfo-app": "./main.js"
+  },
+  "pkg": {
+    "scripts": "*.js",
+    "assets": "www/**/*"
+  },
+  "keywords": [],
+  "author": "The Chromium Authors",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "carlo": "^0.9.0",
+    "systeminformation": "^3.45.9"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.4",
+    "@pptr/testrunner": "^0.5.0"
+  }
+}

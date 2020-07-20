@@ -1,5 +1,5 @@
-# OPEN-PWA
-An OpenSource Project to research and offer the ability to Port PWA Concepts to any Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
+# OPEN-PWA Platform 
+An OpenSource Project to research and offer the ability to Port PWA and Serverless Concepts to any Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
 ## News 
 
@@ -11,17 +11,21 @@ Google Created Project Carlo that will eliminate the most biggest problems of el
 There is a discussion in https://news.ycombinator.com/item?id=18355345 which shows that Open-PWA is still the way to go as it manages the nodejs or serverside dependency while chrome manages updates it self.
 - https://github.com/GoogleChromeLabs/carlo
 
-
+We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
 
 
 ## Current backend Runtime Integrations
-- [ ] cordova-webserver-plugin
-- [ ] deno
+- [ ] unraid
+- [ ] open-stack
+- [ ] kubernetes
 - [ ] docker
 - [ ] nodejs
+- [ ] nodejs-mobile
 - [ ] wasmer
 
-
+## Evaluation
+- [ ] deno
+- [ ] cordova-webserver-plugin
 
 
 ## Permissions - Application based Permissions on the Host

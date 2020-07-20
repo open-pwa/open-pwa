@@ -1,0 +1,18 @@
+# repeats from .gitignore
+.DS_Store
+.eslintrc.js
+.eslintignore
+.profile
+.vscode
+node_modules
+package-lock.json
+rpc/node_modules
+rpc/package-lock.json
+lib/.local-data
+
+.npmignore
+examples
+CONTRIBUTING.md
+API.md
+rpc/test.js
+test
