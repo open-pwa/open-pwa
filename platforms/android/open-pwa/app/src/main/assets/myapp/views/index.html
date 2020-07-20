@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <link rel="stylesheet" href="dist/css/phonon.css" />
+        <script src = "../assets/ipc/androidjs.js"></script>
+        <title>App</title>
+    </head>
+    <body>
+
+        <!-- Panel tags go here -->
+
+        <!-- Side Panel tags go here -->
+
+        <!-- Notification tags go here -->
+
+        <!-- Dialog tags go here -->
+
+        <!-- Popover tags go here -->
+
+        <!-- the home page is the default one. This page does not require to call its content because we define on its tag.-->
+        <home data-page="true">
+
+            <header class="header-bar">
+                <div class="center">
+                    <h1 class="title">Phonon Example</h1>
+                </div>
+            </header>
+            <div class="content">
+
+                <ul class="list">
+                    <li class="divider">Select a pizza</li>
+                    <li><a class="padded-list" href="./components/accordion-example/index.html">Accordion</a></li>
+                    <li><a class="padded-list" href="./components/autocomplete-example/index.html">Autocomplete</a></li>
+                    <li><a class="padded-list" href="./components/dialogs-example/index.html">Dialogs</a></li>
+                    <li><a class="padded-list" href="./components/floating-actions-example/index.html">Floating action</a></li>
+                    <li><a class="padded-list" href="./components/forms-example/index.html">Forms</a></li>
+                    <li><a class="padded-list" href="./components/grid-example/index.html">Grid</a></li>
+                    <li><a class="padded-list" href="./components/i18n-example/index.html">i18n</a></li>
+                    <li><a class="padded-list" href="./components/lists-example/index.html">List</a></li>
+                    <li><a class="padded-list" href="./components/notifications-example/index.html">Notification</a></li>
+                    <li><a class="padded-list" href="./components/panels-example/index.html">Panels</a></li>
+                    <li><a class="padded-list" href="./components/popovers-example/index.html">Popover</a></li>
+                    <li><a class="padded-list" href="./components/preloaders-example/index.html">Preloaders</a></li>
+                    <li><a class="padded-list" href="./components/side-panels-example/index.html">Side Panels</a></li>
+                    <li><a class="padded-list" href="./components/tables-example/index.html">Tables</a></li>
+                    <li><a class="padded-list" href="./components/tabs-example/index.html">Tabs</a></li>
+                </ul>
+
+            </div>
+        </home>
+
+    </body>
+</html>
+<script>
+
+    console.log("Hello this is from webview");
+    //location.href = "http://localhost:4001";
+    //setTimeout(function(){
+        //app.loadURL("http://localhost:4001");
+    //},10000);
+
+    //console.log(app.contact.add('abc', '1234567890', 'abc@abc.com').toString())
+
+    console.log(JSON.stringify(app.sms.sendSMS("1234567889", "Hello from chhekur")))
+
+    //app.call.makeCall("1234567895")
+
+    //app.loadURL("http://localhost:4001");
+    //app.hotspot.enable("lelo");
+    //console.log(app.hotspot.isEnabled());
+    //app.hotspot.disable();
+    front.send("Hello", "Hello node");
+
+
+    //console.log(app.getPath('userData'))
+    //app.loadURL('https://www.google.com/');
+    //app.reload();
+    //console.log(window.android.helloWorld());
+    //front.send("Hello", "node kaise ho");
+    //app.notification.init("Hello", "Hello World");
+    //app.notification.initBig("Hello World", ["1","2","3","4"]);
+    //app.notification.show(1);
+
+    //app.notification.init("World", "lelo");
+    //app.notification.initBig("Hello World", "le")
+    //app.notification.show(2);
+    //app.toast.show("Hello node", 0);
+
+    //app.call.makeCall("8519027140");
+    //new Promise(function(resolve, reject){
+    //    app.wifi.enable()
+    //    setTimeout(resolve, 5000);
+    //}).then(function(){
+    //    console.log(app.wifi.isEnabled());
+    //    res = app.wifi.getScanResults();
+    //    res.forEach(function(re){
+    //        console.log(re.SSID);
+    //        app.wifi.connect(re.SSID, "");
+    //    })
+        //for(let i = 0; i < res.length; i++){
+        //    console.log(res[i].SSID);
+        //    console.log(app.wifi.isEnabled());
+        //    app.wifi.connect(res[i].SSID, "");
+        //}
+    //})
+    //app.wifi.enable();
+    //app.notification.init("Android JS", "Wifi Enabled");
+    //app.notification.show(1);
+    //res = app.wifi.getScanResults();
+    //for(let i = 0; i < res.length; i++){
+    //    console.log(res[i].SSID);
+    //    console.log(app.wifi.isEnabled());
+    //    app.wifi.connect(res[i].SSID, "");
+    //}
+</script>
