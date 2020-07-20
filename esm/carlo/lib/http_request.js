@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-/**
- * Copyright 2018 Google Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the 'License');
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an 'AS IS' BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-'use strict';
-
-const debugServer = require('debug')('carlo:server');
-=======
 const debugServer = (...msg)=>console.log(`carlo:server => `,msg);
->>>>>>> add-esm
 
 const statusTexts = {
   '100': 'Continue',
@@ -195,11 +173,7 @@ class HttpRequest {
     const CRLF = '\r\n';
     let text = statusLine + CRLF;
     for (const header of Object.keys(responseHeaders))
-<<<<<<< HEAD
-      text += header + ': ' + responseHeaders[header] + CRLF;
-=======
       text += `${header}: ${responseHeaders[header]}${CRLF}`;
->>>>>>> add-esm
     text += CRLF;
     let responseBuffer = Buffer.from(text, 'utf8');
     if (body)
@@ -234,8 +208,4 @@ class HttpRequest {
   }
 }
 
-<<<<<<< HEAD
-module.exports = { HttpRequest };
-=======
 export { HttpRequest };
->>>>>>> add-esm

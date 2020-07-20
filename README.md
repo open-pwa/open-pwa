@@ -3,6 +3,11 @@ An OpenSource Project to research and offer the ability to Port PWA and Serverle
 
 ## News 
 
+### 20.07.2020
+- Add Carlo
+- Add android build 
+- refactoring and cleanups
+
 ### 17.07.2020
 Google Created Project Carlo that will eliminate the most biggest problems of electron (the packaging of chrome) we will use it as the fundation to allow desktop apps as it is using simply JS+pupeteer(Browser Control) it is a good fit while it solves not all problems that we solve as for example open-pwa:// integration it is a big game changer 
 
