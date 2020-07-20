@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-'use strict';
-
 class Color {
   /**
    * @param {!Array.<number>} rgba
@@ -90,14 +88,14 @@ class Color {
           values.splice(3, 1);
           if (values.length !== 4)
             return null;
-        } else if ((values.length > 2 && values[2].indexOf('/') !== -1) || (values.length > 3 && values[3].indexOf('/') !== -1)) {
+        } else if ((values.length > 2 && values[2].includes('/')) || (values.length > 3 && values[3].includes('/'))) {
           const alpha = values.slice(2, 4).join('');
           values = values.slice(0, 2).concat(alpha.split(/\//)).concat(values.slice(4));
         } else if (values.length >= 4) {
           return null;
         }
       }
-      if (values.length !== 3 && values.length !== 4 || values.indexOf('') > -1)
+      if (values.length !== 3 && values.length !== 4 || values.includes(''))
         return null;
       const hasAlpha = (values[3] !== undefined);
 
@@ -106,7 +104,7 @@ class Color {
           Color._parseRgbNumeric(values[0]), Color._parseRgbNumeric(values[1]),
           Color._parseRgbNumeric(values[2]), hasAlpha ? Color._parseAlphaNumeric(values[3]) : 1
         ];
-        if (rgba.indexOf(null) > -1)
+        if (rgba.includes(null))
           return null;
         return new Color(rgba, hasAlpha ? Color.Format.RGBA : Color.Format.RGB, text);
       }
@@ -116,7 +114,7 @@ class Color {
           Color._parseHueNumeric(values[0]), Color._parseSatLightNumeric(values[1]),
           Color._parseSatLightNumeric(values[2]), hasAlpha ? Color._parseAlphaNumeric(values[3]) : 1
         ];
-        if (hsla.indexOf(null) > -1)
+        if (hsla.includes(null))
           return null;
         const rgba = [];
         Color.hsl2rgb(hsla, rgba);
@@ -136,7 +134,7 @@ class Color {
       return null;
     const parsed = parseFloat(value);
 
-    if (value.indexOf('%') !== -1) {
+    if (value.includes('%')) {
       if (value.indexOf('%') !== value.length - 1)
         return null;
       return parsed / 100;
@@ -153,7 +151,7 @@ class Color {
     if (parsed === null)
       return null;
 
-    if (value.indexOf('%') !== -1)
+    if (value.includes('%'))
       return parsed;
     return parsed / 255;
   }
@@ -168,11 +166,11 @@ class Color {
       return null;
     const number = parseFloat(angle);
 
-    if (value.indexOf('turn') !== -1)
+    if (value.includes('turn'))
       return number % 1;
-    else if (value.indexOf('grad') !== -1)
+    else if (value.includes('grad'))
       return (number / 400) % 1;
-    else if (value.indexOf('rad') !== -1)
+    else if (value.includes('rad'))
       return (number / (2 * Math.PI)) % 1;
     return (number / 360) % 1;
   }
@@ -340,7 +338,7 @@ class Color {
      */
     function toHexValue(value) {
       const hex = Math.round(value * 255).toString(16);
-      return hex.length === 1 ? '0' + hex : hex;
+      return hex.length === 1 ? `0${hex}` : hex;
     }
 
     /**
@@ -427,4 +425,4 @@ Color.Format = {
   HSLA: 'hsla'
 };
 
-module.exports = { Color };
+export { Color };

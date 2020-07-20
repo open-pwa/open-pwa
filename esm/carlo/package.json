@@ -1,5 +1,6 @@
 {
   "name": "carlo",
+<<<<<<< HEAD
   "version": "0.9.46",
   "description": "Carlo is a framework for rendering Node data structures using Chrome browser.",
   "repository": "github:GoogleChromeLabs/carlo",
@@ -7,6 +8,15 @@
     "node": ">=7.6.0"
   },
   "main": "index.js",
+=======
+  "version": "0.10.0",
+  "description": "ECMAScript Browser Bindings for Chrome & Firefox via pupeteer.",
+  "repository": "github:GoogleChromeLabs/carlo",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "main": "lib/carlo.js",
+>>>>>>> add-esm
   "directories": {
     "lib": "lib"
   },

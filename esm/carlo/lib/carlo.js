@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Copyright 2018 Google Inc. All rights reserved.
  *
@@ -30,6 +31,20 @@ const util = require('util');
 const {URL} = require('url');
 const EventEmitter = require('events');
 const fsReadFile = util.promisify(fs.readFile);
+=======
+import path from 'path';
+import puppeteer from 'puppeteer-core';
+import findChrome from './find_chrome';
+import {rpc} from '../rpc';
+const debugApp = (...msg)=>console.log(`carlo:app => `,msg);
+const debugServer = (...msg)=>console.log(`carlo:server => `,msg);
+import {Color} from './color';
+import {HttpRequest} from './http_request';
+import {promises as fs } from 'fs';
+import {URL} from 'url';
+import EventEmitter from 'events';
+
+>>>>>>> add-esm
 
 let testMode = false;
 
@@ -168,7 +183,11 @@ class App extends EventEmitter {
    * @param {string=} prefix Only serve folder for requests with given prefix.
    */
   serveOrigin(base, prefix = '') {
+<<<<<<< HEAD
     this.www_.push({baseURL: new URL(base + '/'), prefix: wrapPrefix(prefix)});
+=======
+    this.www_.push({baseURL: new URL(`${base}/`), prefix: wrapPrefix(prefix)});
+>>>>>>> add-esm
   }
 
   /**
@@ -194,7 +213,11 @@ class App extends EventEmitter {
    * @param {string|!Buffer} dockIcon
    */
   async setIcon(icon) {
+<<<<<<< HEAD
     const buffer = typeof icon === 'string' ? await fsReadFile(icon) : icon;
+=======
+    const buffer = typeof icon === 'string' ? await fs.readFile(icon) : icon;
+>>>>>>> add-esm
     this.session_.send('Browser.setDockTile',
         { image: buffer.toString('base64') }).catch(e => {});
   }
@@ -235,9 +258,15 @@ class App extends EventEmitter {
   /**
    * @param {!Window}
    */
+<<<<<<< HEAD
   windowClosed_(window) {
     debugApp('window closed', window.loadURI_);
     this.windows_.delete(window.page_);
+=======
+  windowClosed_({loadURI_, page_}) {
+    debugApp('window closed', loadURI_);
+    this.windows_.delete(page_);
+>>>>>>> add-esm
     if (!this.windows_.size)
       this.exit();
   }
@@ -274,7 +303,11 @@ class Window extends EventEmitter {
 
     await Promise.all([
       this.session_.send('Runtime.evaluate', { expression: 'self.paramsForReuse', returnByValue: true }).
+<<<<<<< HEAD
         then(response => { this.paramsForReuse_ = response.result.value; }),
+=======
+        then(({result}) => { this.paramsForReuse_ = result.value; }),
+>>>>>>> add-esm
       this.session_.send('Emulation.setDefaultBackgroundColorOverride',
           {color: {r: bgcolorRGBA[0], g: bgcolorRGBA[1],
             b: bgcolorRGBA[2], a: bgcolorRGBA[3] * 255}}),
@@ -320,7 +353,11 @@ class Window extends EventEmitter {
    * @param {string=} prefix Only serve folder for requests with given prefix.
    */
   serveOrigin(base, prefix = '') {
+<<<<<<< HEAD
     this.www_.push({baseURL: new URL(base + '/'), prefix: wrapPrefix(prefix)});
+=======
+    this.www_.push({baseURL: new URL(`${base}/`), prefix: wrapPrefix(prefix)});
+>>>>>>> add-esm
   }
 
   /**
@@ -354,8 +391,13 @@ class Window extends EventEmitter {
     return result;
   }
 
+<<<<<<< HEAD
   initBounds_(result) {
     this.windowId_ = result.windowId;
+=======
+  initBounds_({windowId}) {
+    this.windowId_ = windowId;
+>>>>>>> add-esm
     return this.setBounds({ top: this.options_.top,
       left: this.options_.left,
       width: this.options_.width,
@@ -387,9 +429,15 @@ class Window extends EventEmitter {
   async configureRpcOnce_() {
     await this.page_.exposeFunction('receivedFromChild', data => this.receivedFromChild_(data));
 
+<<<<<<< HEAD
     const rpcFile = (await fsReadFile(__dirname + '/../rpc/rpc.js')).toString();
     const features = [ require('./features/shortcuts.js'),
                        require('./features/file_info.js') ];
+=======
+    const rpcFile = (await fs.readFile(`${__dirname}/../rpc/rpc.js`)).toString();
+    const features = [ import('./features/shortcuts.js').then(({install})=>install),
+                       import('./features/file_info.js').then(({install})=>install)];
+>>>>>>> add-esm
 
     await this.page_.evaluateOnNewDocument((rpcFile, features) => {
       const module = { exports: {} };
@@ -490,7 +538,11 @@ class Window extends EventEmitter {
         continue;
 
       const headers = { 'content-type': contentType(request, fileName) };
+<<<<<<< HEAD
       const body = await fsReadFile(fileName);
+=======
+      const body = await fs.readFile(fileName);
+>>>>>>> add-esm
       request.fulfill({ headers, body});
       return;
     }
@@ -658,9 +710,17 @@ function enterTestMode() {
 }
 
 function wrapPrefix(prefix) {
+<<<<<<< HEAD
   if (!prefix.startsWith('/')) prefix = '/' + prefix;
+=======
+  if (!prefix.startsWith('/')) prefix = `/${prefix}`;
+>>>>>>> add-esm
   if (!prefix.endsWith('/')) prefix += '/';
   return prefix;
 }
 
+<<<<<<< HEAD
 module.exports = { launch, enterTestMode };
+=======
+export default { launch, enterTestMode };
+>>>>>>> add-esm

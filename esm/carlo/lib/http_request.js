@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Copyright 2018 Google Inc. All rights reserved.
  *
@@ -17,6 +18,9 @@
 'use strict';
 
 const debugServer = require('debug')('carlo:server');
+=======
+const debugServer = (...msg)=>console.log(`carlo:server => `,msg);
+>>>>>>> add-esm
 
 const statusTexts = {
   '100': 'Continue',
@@ -191,7 +195,11 @@ class HttpRequest {
     const CRLF = '\r\n';
     let text = statusLine + CRLF;
     for (const header of Object.keys(responseHeaders))
+<<<<<<< HEAD
       text += header + ': ' + responseHeaders[header] + CRLF;
+=======
+      text += `${header}: ${responseHeaders[header]}${CRLF}`;
+>>>>>>> add-esm
     text += CRLF;
     let responseBuffer = Buffer.from(text, 'utf8');
     if (body)
@@ -226,4 +234,8 @@ class HttpRequest {
   }
 }
 
+<<<<<<< HEAD
 module.exports = { HttpRequest };
+=======
+export { HttpRequest };
+>>>>>>> add-esm

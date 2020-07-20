@@ -4,8 +4,7 @@
 
 -----------------------
 
-
-> Carlo provides Node applications with [Google Chrome](https://www.google.com/chrome/) rendering capabilities, communicates with the locally-installed browser instance using the [Puppeteer](https://github.com/GoogleChrome/puppeteer/) project, and implements a remote call infrastructure for communication between Node and the browser.
+> Carlo did provide Node applications with [Google Chrome](https://www.google.com/chrome/) rendering capabilities, communicates with the locally-installed browser instance using the [Puppeteer](https://github.com/GoogleChrome/puppeteer/) project, and implements a remote call infrastructure for communication between Node and the browser.
 
 ###### [API](https://github.com/GoogleChromeLabs/carlo/blob/master/API.md) | [FAQ](#faq) | [Contributing](https://github.com/GoogleChromeLabs/carlo/blob/master/CONTRIBUTING.md)
 

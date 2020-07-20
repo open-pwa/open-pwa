@@ -1,26 +1,8 @@
-/**
- * Copyright 2018 Google Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the 'License');
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an 'AS IS' BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-const execSync = require('child_process').execSync;
-const execFileSync = require('child_process').execFileSync;
-const puppeteer = require('puppeteer-core');
+import fs from 'fs';
+import path from 'path';
+import {execSync} from 'child_process';
+import {execFileSync} from 'child_process';
+import puppeteer from 'puppeteer-core';
 
 const newLineRegex = /\r?\n/;
 
@@ -126,7 +108,7 @@ function sort(installations, priorities) {
         return {path: inst, weight: defaultPriority};
       })
       // sort based on priorities
-      .sort((a, b) => (b.weight - a.weight))
+      .sort(({weight}, {weight}) => weight - weight)
       // remove priority flag
       .map(pair => pair.path);
 }
@@ -179,8 +161,8 @@ function findChromeExecutables(folder) {
 /**
  * @return {!Promise<?string>}
  */
-async function downloadChromium(options, targetRevision) {
-  const browserFetcher = puppeteer.createBrowserFetcher({ path: options.localDataDir });
+async function downloadChromium({localDataDir}, targetRevision) {
+  const browserFetcher = puppeteer.createBrowserFetcher({ path: localDataDir });
   const revision = targetRevision || require('puppeteer-core/package.json').puppeteer.chromium_revision;
   const revisionInfo = browserFetcher.revisionInfo(revision);
 
@@ -192,7 +174,7 @@ async function downloadChromium(options, targetRevision) {
   try {
     console.log(`Downloading Chromium r${revision}...`);
     const newRevisionInfo = await browserFetcher.download(revisionInfo.revision);
-    console.log('Chromium downloaded to ' + newRevisionInfo.folderPath);
+    console.log(`Chromium downloaded to ${newRevisionInfo.folderPath}`);
     let localRevisions = await browserFetcher.localRevisions();
     localRevisions = localRevisions.filter(revision => revision !== revisionInfo.revision);
     // Remove previous chromium revisions.
@@ -252,4 +234,4 @@ async function findChrome(options) {
   return {};
 }
 
-module.exports = findChrome;
+export { findChrome };
