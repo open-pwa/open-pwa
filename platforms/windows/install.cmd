@@ -1,0 +1,1 @@
+REM Command line script to Install cygwin and n + pm2

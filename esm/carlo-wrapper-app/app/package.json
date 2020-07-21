@@ -1,0 +1,14 @@
+{
+  "name": "placeholder",
+  "version": "0.0.0",
+  "description": "Placeholder for app",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-notifier": "5.4.3"
+  }
+}
