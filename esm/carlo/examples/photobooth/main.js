@@ -16,7 +16,7 @@
 
 'use strict';
 
-const carlo = require('carlo');
+import {launch} from '../../carlo/lib/carlo.js'
 const fs = require('fs');
 const path = require('path');
 const os = require('os');

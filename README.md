@@ -59,29 +59,71 @@ so this will be a single daemon or app or server it is not so important how we n
 
 The Implementation will be written in JS the First Prototype will be NodeJs based and later we expand it to GraalJs to get it even more embedded able while keeping the code understandable by all ECMAScript knowing people,
 
-This is an Open Source Effort it got initialized by Frank Lemanschik not on purpose because he has written that article
-https://medium.com/@frank_lemanschik/is-it-all-about-the-package-manager-43077634124c?sk=1fdba664c3fdce60b3a5d4d10d0e8773
-
 ## Concepts open-pwa runtime
 - open-pwa runtime runs on a remote host or the local desktop pc
-- It offers a service worker deployment interface
+- It offers a service worker deployment interfaces open-pwa://my-app-id and <protocol>://open-pwa/my-app-id
+    - grpc endpoint 
+    - http2 endpoint
+    - websockets endpoint
 - It offers all browser related API's for PWA's like storage and others
+- Current Implementation
+  - (docker)NodeJS-(mobile) + Wasmer
+  - Custom kublet implementation done via rust 
 - First Implamentations JS+WASM
-  - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
   - [upwa](https://github.com/direktspeed/upwa) rust + wasmer + deno
   - [uwasi](https://github.com/direktspeed/uwasi) offers wasmer-js Platform bindings.
-  - graalvm and also node-graalvm
-
+  - graalvm and also node-graalvm https://github.com/lazar-mitrovic/GraalREPL
+  - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
+- API's
+  - run worker process
+  - register desktop app 
+  - listen on address device
+  - systeminfo
+  - user management (maybe reffered to the underlaying os not sure if we should implement it)
 
 ## What will Open-PWA Solve?
 It will provide a ecosystem for a total new concept to deploy existing PWA's to diffrent Platforms then the Browser as also 
-New Concepts for Live Updates and Deployments PSSA - Progressive Server Side Applications maybe it will be called PSSS - Progressive Server Side Services. of existing Applications Running. This is research on the new Container Caps
-of wasm also.
+New Concepts for Live Updates and Deployments PSSA - Progressive Server Side Applications maybe it will be called PSSS - Progressive Server Side Services. of existing Applications Running. This is research on the new Container Caps of wasm also.
+- permission system isolated access to device caps
+- running processes on the device with access to os api's via unified api
+- universal install system
+- universal software update system
+- supports nodejs, docker, kubernetes, open-stack, chrome
+
+## Collaboration
+Simply contact me via the issue section at present it is fast to get into the project as it is quit new :)
 
 
-## The NodeJS Auto Update Problem
-- if you run nodejs via docker you will never have it as you can replace the nodejs version
-- if you use the curl -L https://git.io/n-install | bash or brew install n
-  - n latest && node your-app.js 
-- (Windows) https://github.com/coreybutler/nvm-windows 
-- https://github.com/android-js/androidjs/ (nodejs-bindings for android)
+## History
+This is an Open Source Effort it got initialized by Frank Lemanschik not on purpose because he has written that article
+https://medium.com/@frank_lemanschik/is-it-all-about-the-package-manager-43077634124c?sk=1fdba664c3fdce60b3a5d4d10d0e8773
+
+It Joins with a lot of my other projects that i was working on the last 20 years
+- direktspeed server
+- direktspeed os
+- direktspeed serverless *
+- serverless *
+
+Into one giant open project OPEN-PWA That will hopefully deliver Expirences better then ever to the user.
+
+## PREREQUISITES windows, linux, macos, Android Dev Only,IOS  Dev Only
+bash,git,mv, rm, tr, type, curl/wget, base64, sudo (if not root),make (GNU)
+tar (or unzip on OSX and Windows),
+gpg (optional verification)
+
+## Package Manager for the OS
+- brew (macos)
+- chocolatey (windows)
+- apt (bash)(linux)
+
+
+
+## Development Linux
+Use existing n and pm2 installs maybe create a seperated user profile for testing
+
+```bash
+mkdir ~/.open-pwa
+ln -s ~/n ~/.open-pwa
+ln -s ~/.pm2 ~/.open-pwa
+
+```

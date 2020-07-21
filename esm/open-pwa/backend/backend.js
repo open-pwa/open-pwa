@@ -3,5 +3,10 @@
  */
 export const api = {
     emit: ()=>'emit',
-    subscribe: () =>'subscribe'
+    subscribe: () =>'subscribe',
+    install: (obj)=> {
+        //Evaluate permissions?
+        //obj.emit('install',{emit,subscribe})
+
+    }
 }
