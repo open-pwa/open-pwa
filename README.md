@@ -127,3 +127,10 @@ ln -s ~/n ~/.open-pwa
 ln -s ~/.pm2 ~/.open-pwa
 
 ```
+
+
+## Supported Package Formarts 
+- appimage
+- docker
+- tar.gz
+- git
