@@ -25,16 +25,19 @@ We Are more then happy to announce that we will keep that functionality running 
 
 
 ## Current backend Runtime Integrations
+- [x] electron
 - [ ] unraid
-- [ ] open-stack
-- [ ] kubernetes
-- [ ] docker
-- [ ] nodejs
+- [x] open-stack
+- [x] kubernetes
+- [x] docker
+- [x] nodejs
+- [x] os nativ apps
 - [ ] nodejs-mobile
 - [ ] wasmer
 
 ## Evaluation
-- [ ] deno
+- [ ] weex
+- [x] deno
 - [ ] cordova-webserver-plugin
 
 
@@ -48,7 +51,7 @@ We can expect a RasPI with a small lcd screen to display a scrolling text withou
 
 ## Remote API Polyfills
 - wasi
-  - Run wasm in a browser client with access to a remote resource as would it be the local environment.
+  - Run wasm in a browser client with access to a remote resource as would it be the local environment. 
 - chrome
   - run a uwasi remote host and expose that as the current browser to JS
   
@@ -66,19 +69,20 @@ The Implementation will be written in JS the First Prototype will be NodeJs base
 
 ## Concepts open-pwa runtime
 - open-pwa runtime runs on a remote host or the local desktop pc
-- It offers a service worker deployment interfaces open-pwa://my-app-id and <protocol>://open-pwa/my-app-id
-    - grpc endpoint 
-    - http2 endpoint
-    - websockets endpoint
+- It offers a service worker deployment interface open-pwa://my-app-id and <protocol>://open-pwa/my-app-id that exposes *.<my-app-id> 
+    - additional on ip:port for restricted deployments without access to dns or host protocol services.
+      - grpc endpoint 
+      - http2 endpoint
+      - websockets endpoint
 - It offers all browser related API's for PWA's like storage and others
-- Current Implementation
-  - (docker)NodeJS-(mobile) + Wasmer
-  - Custom kublet implementation done via rust 
+- Custom kublet implementation done via rust
+
 - First Implamentations JS+WASM
-  - [upwa](https://github.com/direktspeed/upwa) rust + wasmer + deno
-  - [uwasi](https://github.com/direktspeed/uwasi) offers wasmer-js Platform bindings.
-  - graalvm and also node-graalvm https://github.com/lazar-mitrovic/GraalREPL
-  - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
+  - ECMAScript 6+ Modules Compatible for NodeJS (mobile) (graalvm) Based Host Platform
+    - [upwa](https://github.com/direktspeed/upwa) rust + wasmer + deno
+    - [uwasi](https://github.com/direktspeed/uwasi) offers wasmer-js Platform bindings.
+    - graalvm and also node-graalvm https://github.com/lazar-mitrovic/GraalREPL
+    - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
 - API's
   - run worker process
   - register desktop app 
