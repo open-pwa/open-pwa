@@ -3,6 +3,11 @@ An OpenSource Project to research and offer the ability to Port PWA and Serverle
 
 ## News 
 
+## 15.08.2020
+- New Electron Support Landed makes Electron apps More Efficent and allows to run them directly on open-pwa without a indipendent electron installation.
+- WebView2 Support upcoming the guys @google carlo did point out that Mozilla and Microsoft are working on WebView2 and we looked into it and will support that.
+
+
 ### 20.07.2020
 - Add Carlo
 - Add android build 
