@@ -1,25 +1,22 @@
 # OPEN-PWA Platform 
-An OpenSource Project to research and offer the ability to Port PWA and Serverless Concepts to any Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
+Get Reach and Power with your Hybrid Apps on any Device and Scale!
 
-## News 
+Open Pwa is a Platform that runs on Any Device with a easy installer and then allows you to run WebSites and Applications with Nativ Capabilitys.
+It has a Permission System, Window,Task, Prozess Manager, Install & Update Api Inspired by ServiceWorker Concepts.
 
-## 15.08.2020
-- New Electron Support Landed makes Electron apps More Efficent and allows to run them directly on open-pwa without a indipendent electron installation.
-- WebView2 Support upcoming the guys @google carlo did point out that Mozilla and Microsoft are working on WebView2 and we looked into it and will support that.
+It Also Offers its own Formart for 
+Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
+
+## Information for Google Carlo Users
+As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependencie of oepen-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
 
 
-### 20.07.2020
-- Add Carlo
-- Add android build 
-- refactoring and cleanups
-
-### 17.07.2020
-Google Created Project Carlo that will eliminate the most biggest problems of electron (the packaging of chrome) we will use it as the fundation to allow desktop apps as it is using simply JS+pupeteer(Browser Control) it is a good fit while it solves not all problems that we solve as for example open-pwa:// integration it is a big game changer 
-
-"the idea is amazing i am shoked that i did not have it" Quoted from Frank Lemanschik
+# Open PWA Compared with WebView2, Electron, NW.JS and so on
+- Electron apps More Efficent and allows to run them directly on open-pwa without a indipendent electron installation. Adds Open Pwa Features!
+- WebView2 Allows Hybrid Apps while OPEN-PWA is a Hybrid App Platform it allows to turn Hybrid Apps and even Websites Into Nativ Apps!
+- HashiCorp Terraform Compatible Syntax Support! Enables Remote Deployments of Terraform Specs.
 
 There is a discussion in https://news.ycombinator.com/item?id=18355345 which shows that Open-PWA is still the way to go as it manages the nodejs or serverside dependency while chrome manages updates it self.
-- https://github.com/GoogleChromeLabs/carlo
 
 We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
 
