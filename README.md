@@ -1,5 +1,5 @@
 # OPEN-PWA Platform 
-Get Reach and Power with your Hybrid Apps on any Device and Scale!
+Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface!
 
 Open Pwa is a Platform that runs on Any Device with a easy installer and then allows you to run WebSites and Applications with Nativ Capabilitys.
 It has a Permission System, Window,Task, Prozess Manager, Install & Update Api Inspired by ServiceWorker Concepts.
@@ -27,15 +27,17 @@ We Are more then happy to announce that we will keep that functionality running 
 - [x] open-stack
 - [x] kubernetes
 - [x] docker
-- [x] nodejs
+- [x] nodejs (Including Java InterOp via node-graalvm)
 - [x] os nativ apps
 - [ ] nodejs-mobile
 - [ ] wasmer
 
 ## Evaluation
 - [ ] weex
+- [ ] QT
+- [ ] wxWidgets
 - [x] deno
-- [ ] cordova-webserver-plugin
+- [ ] cordova
 
 
 ## Permissions - Application based Permissions on the Host
