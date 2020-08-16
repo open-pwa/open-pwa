@@ -1,5 +1,5 @@
 # OPEN-PWA Platform 
-Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface!
+Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
 
 Open Pwa is a Platform that runs on Any Device with a easy installer and then allows you to run WebSites and Applications with Nativ Capabilitys.
 It has a Permission System, Window,Task, Prozess Manager, Install & Update Api Inspired by ServiceWorker Concepts.
