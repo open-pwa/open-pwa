@@ -1,10 +1,12 @@
-# OPEN-PWA Platform 
+# OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
 
 Open Pwa is a Platform that runs on Any Device with a easy installer and then allows you to run WebSites and Applications with Nativ Capabilitys.
 It has a Permission System, Window,Task, Prozess Manager, Install & Update Api Inspired by ServiceWorker Concepts.
 
-It Also Offers its own Formart for 
+It can change everything as a Open Platform to port your existing software or create new Software with the most Efficent Open Source Frameworks around.
+
+It Also Offers its own Formart for Cloud Deployments any device can be part of any cloud or its own cloud.
 Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
 ## Information for Google Carlo Users
