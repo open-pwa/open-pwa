@@ -9,6 +9,15 @@ It can change everything as a Open Platform to port your existing software or cr
 It Also Offers its own Formart for Cloud Deployments any device can be part of any cloud or its own cloud.
 Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
+
+## https://oam.dev/
+An App-centric Model
+1. Application first - the platform is built around a self-contained app model, where operational characteristics are also part of app definition, free of infrastructure here.
+2. Clarity and extensibility - an open standard to modularize your platform capabilities into reusable pieces, with freedom to bring your own abstractions and implementations.
+3. Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.
+
+
+
 ## Information for Google Carlo Users
 As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependencie of oepen-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
 
