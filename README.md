@@ -1,6 +1,11 @@
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
 
+We see at present the trend of other Projects to move in our direction i like it :) Lets Mentoin them 
+- Crossplane 
+- oam.dev
+- kubernetes.
+
 Open Pwa is a Platform that runs on Any Device with a easy installer and then allows you to run WebSites and Applications with Nativ Capabilitys.
 It has a Permission System, Window,Task, Prozess Manager, Install & Update Api Inspired by ServiceWorker Concepts.
 
@@ -153,3 +158,7 @@ ln -s ~/.pm2 ~/.open-pwa
 - docker
 - tar.gz
 - git
+
+
+
+
