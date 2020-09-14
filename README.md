@@ -37,7 +37,21 @@ There is a discussion in https://news.ycombinator.com/item?id=18355345 which sho
 We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
 
 
+
+## Current Implementation
+- Java + NodeJS Shared Object Builds
+  - nodejs-mobile (12.x)
+  - node-liquidcore (10.x)
+  - nodejs (15)
+  - es4x (GraalJS)
+- Java + GraalJS
+- https://github.com/amino-os/Amino.Run
+
+
 ## Current backend Runtime Integrations
+
+
+## Evaluation
 - [x] electron
 - [ ] unraid
 - [x] open-stack
@@ -47,8 +61,6 @@ We Are more then happy to announce that we will keep that functionality running 
 - [x] os nativ apps
 - [ ] nodejs-mobile
 - [ ] wasmer
-
-## Evaluation
 - [ ] weex
 - [ ] QT
 - [ ] wxWidgets
