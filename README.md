@@ -52,6 +52,7 @@ We Are more then happy to announce that we will keep that functionality running 
 
 
 ## Evaluation
+- [x] IREE (Like WASM) https://github.com/google/iree
 - [x] electron
 - [ ] unraid
 - [x] open-stack
