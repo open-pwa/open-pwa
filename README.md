@@ -1,3 +1,6 @@
+# Breaking NEWS
+Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on IOS Already.
+
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
 
@@ -21,8 +24,6 @@ An App-centric Model
 2. Clarity and extensibility - an open standard to modularize your platform capabilities into reusable pieces, with freedom to bring your own abstractions and implementations.
 3. Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.
 
-
-
 ## Information for Google Carlo Users
 As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependencie of oepen-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
 
@@ -39,17 +40,8 @@ We Are more then happy to announce that we will keep that functionality running 
 
 
 ## Current Implementation
-- Java + NodeJS Shared Object Builds
-  - nodejs-mobile (12.x)
-  - node-liquidcore (10.x)
-  - nodejs (15)
-  - es4x (GraalJS)
-- Java + GraalJS
+- GraalVM + GraalJS + Stealify
 - https://github.com/amino-os/Amino.Run
-
-
-## Current backend Runtime Integrations
-
 
 ## Evaluation
 - [x] IREE (Like WASM) https://github.com/google/iree
@@ -68,16 +60,18 @@ We Are more then happy to announce that we will keep that functionality running 
 - [x] deno
 - [ ] cordova
 
-
 ## Permissions - Application based Permissions on the Host
 
 ## Service Workers - as Deployment Package
+We Will Deploy the serviceWorkers in 2 Formarts WASM using the WASI and JavaScript using the JS API 
+OpenPwa gets called with a serviceWorker URL 
 
 ## Run a PWA on a None Browser based Runtime
 We can expect a RasPI with a small lcd screen to display a scrolling text without a browser.
-- The RasPI will need to call a app based on the url if a new service worker gets deployed.
+- using sharedModules as formart Comes into mind but not sure.
 
-## Remote API Polyfills
+## Remote API Polyfills for wasm
+Local WASM needs to talk to OpenPwa it can do that via the JS Api or we Supply a WASI Shim
 - wasi
   - Run wasm in a browser client with access to a remote resource as would it be the local environment. 
 - chrome
@@ -89,7 +83,7 @@ This will make service worker driven pwa and pssa work.
 they will get deployed via installation of a remote serviceworker.
   
 ## What and Why?
-We will research and create an environment agnostic way to run PWA's in browsers that do not support them. we will offer a permission-based API and implement all the functionality that chrome offers for a PWA.
+We will research and create an environment agnostic way to run PWA's in browsers and none browser environments that do not support PWA's. we will offer a permission-based API and implement all the functionality that chrome offers for a PWA and all NativSystemCaps.
 
 so this will be a single daemon or app or server it is not so important how we name that. It will expose API's that a remote website can call to request a local installation and use of existing Platform features.
 
