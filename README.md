@@ -162,3 +162,6 @@ ln -s ~/.pm2 ~/.open-pwa
 - tar.gz
 - git
 - serviceWorker
+
+## OpenPWA's relation to deployless
+OpenPWA is the foundation of @direktspeed/deployless it uses openpwa under the hood.
