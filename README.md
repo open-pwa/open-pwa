@@ -17,6 +17,9 @@ It can change everything as a Open Platform to port your existing software or cr
 It Also Offers its own Formart for Cloud Deployments any device can be part of any cloud or its own cloud.
 Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
+## How does it WORK?
+Open Pwa is a Platform build with the @stealify/stealify Framework the EE Encapsulation Standard OpenPwa also offers some high level tooling also build with stealify to package and deploy your code via vmpack and vmdeploy (deployless)
+
 
 ## https://oam.dev/
 An App-centric Model
@@ -27,23 +30,20 @@ An App-centric Model
 ## Information for Google Carlo Users
 As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependencie of oepen-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
 
+We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
 
 # Open PWA Compared with WebView2, Electron, NW.JS and so on
 - Electron apps More Efficent and allows to run them directly on open-pwa without a indipendent electron installation. Adds Open Pwa Features!
 - WebView2 Allows Hybrid Apps while OPEN-PWA is a Hybrid App Platform it allows to turn Hybrid Apps and even Websites Into Nativ Apps!
-- HashiCorp Terraform Compatible Syntax Support! Enables Remote Deployments of Terraform Specs.
+- HashiCorp Terraform Compatible Syntax Support! Enables Remote Deployments of Terraform Specs. (You can Deploy from and to terraform)
 
-There is a discussion in https://news.ycombinator.com/item?id=18355345 which shows that Open-PWA is still the way to go as it manages the nodejs or serverside dependency while chrome manages updates it self.
-
-We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
-
-
+There is a discussion in https://news.ycombinator.com/item?id=18355345 which shows that Open-PWA is still the way to go as it manages the Runtime or serverside dependency while chrome manages updates it self.
 
 ## Current Implementation
-- GraalVM + GraalJS + Stealify
-- https://github.com/amino-os/Amino.Run
+- Stealify + https://github.com/amino-os/Amino.Run
 
 ## Evaluation
+- [ ] https://github.com/amino-os/Amino.Run
 - [x] IREE (Like WASM) https://github.com/google/iree
 - [x] electron
 - [ ] unraid
@@ -87,10 +87,10 @@ We will research and create an environment agnostic way to run PWA's in browsers
 
 so this will be a single daemon or app or server it is not so important how we name that. It will expose API's that a remote website can call to request a local installation and use of existing Platform features.
 
-The Implementation will be written in JS the First Prototype will be NodeJs based and later we expand it to GraalJs to get it even more embedded able while keeping the code understandable by all ECMAScript knowing people,
+The Implementation will be written in JS using GraalVM with Stealify to get it even more embedded able while keeping the code understandable by all ECMAScript knowing people,
 
 ## Concepts open-pwa runtime
-- open-pwa runtime runs on a remote host or the local desktop pc
+- open-pwa runtime runs on a remote host or the local desktop pc look into amino.run 
 - It offers a service worker deployment interface open-pwa://my-app-id and <protocol>://open-pwa/my-app-id that exposes *.<my-app-id> 
     - additional on ip:port for restricted deployments without access to dns or host protocol services.
       - grpc endpoint 
@@ -103,8 +103,7 @@ The Implementation will be written in JS the First Prototype will be NodeJs base
   - ECMAScript 6+ Modules Compatible for NodeJS (mobile) (graalvm) Based Host Platform
     - [upwa](https://github.com/direktspeed/upwa) rust + wasmer + deno
     - [uwasi](https://github.com/direktspeed/uwasi) offers wasmer-js Platform bindings.
-    - graalvm and also node-graalvm https://github.com/lazar-mitrovic/GraalREPL
-    - nodejs + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
+    - graalvm and also node-graalvm https://github.com/lazar-mitrovic/GraalREPL + [es-permissions](https://github.com/direktspeed/es-permissions) can be used for the first implamentation
 - API's
   - run worker process
   - register desktop app 
@@ -119,11 +118,10 @@ New Concepts for Live Updates and Deployments PSSA - Progressive Server Side App
 - running processes on the device with access to os api's via unified api
 - universal install system
 - universal software update system
-- supports nodejs, docker, kubernetes, open-stack, chrome
+- supports GraalVM, docker, kubernetes, open-stack, chrome
 
 ## Collaboration
 Simply contact me via the issue section at present it is fast to get into the project as it is quit new :)
-
 
 ## History
 This is an Open Source Effort it got initialized by Frank Lemanschik not on purpose because he has written that article
@@ -134,8 +132,10 @@ It Joins with a lot of my other projects that i was working on the last 20 years
 - direktspeed os
 - direktspeed serverless *
 - serverless *
+- stealify
+- Maybe 1000+ Projects
 
-Into one giant open project OPEN-PWA That will hopefully deliver Expirences better then ever to the user.
+Into one giant open project OPEN-PWA That will hopefully deliver Expirences better then ever to the user. And also make Developers More Efficent and Happy.
 
 ## PREREQUISITES windows, linux, macos, Android Dev Only,IOS  Dev Only
 bash,git,mv, rm, tr, type, curl/wget, base64, sudo (if not root),make (GNU)
@@ -147,8 +147,6 @@ gpg (optional verification)
 - chocolatey (windows)
 - apt (bash)(linux)
 
-
-
 ## Development Linux
 Use existing n and pm2 installs maybe create a seperated user profile for testing
 
@@ -156,16 +154,11 @@ Use existing n and pm2 installs maybe create a seperated user profile for testin
 mkdir ~/.open-pwa
 ln -s ~/n ~/.open-pwa
 ln -s ~/.pm2 ~/.open-pwa
-
 ```
-
 
 ## Supported Package Formarts 
 - appimage
 - docker
 - tar.gz
 - git
-
-
-
-
+- serviceWorker
