@@ -1,5 +1,5 @@
 # Breaking NEWS
-Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on IOS Already.
+Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on iOS Already.
 
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
@@ -28,7 +28,7 @@ An App-centric Model
 3. Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.
 
 ## Information for Google Carlo Users
-As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependencie of oepen-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
+As Google Carlo is deprecated we will offer @open-pwa/carlo with the same and more abilitys which will get maintained as it is a shared dependency of open-pwa that can run standalone simply use ```npm i @open-pwa/carlo``` inside open-pwa/packages/carlo you can find readme.md and additional explainations.
 
 We Are more then happy to announce that we will keep that functionality running and will reuse it as Carlo is not maintained anymore we adopted it's code and made a ECMAScript 6+ version out of it to keep maintance overhead low. We will publish that under @open-pwa/carlo@>0.10.0
 
@@ -137,8 +137,8 @@ It Joins with a lot of my other projects that i was working on the last 20 years
 
 Into one giant open project OPEN-PWA That will hopefully deliver Expirences better then ever to the user. And also make Developers More Efficent and Happy.
 
-## PREREQUISITES windows, linux, macos, Android Dev Only,IOS  Dev Only
-bash,git,mv, rm, tr, type, curl/wget, base64, sudo (if not root),make (GNU)
+## PREREQUISITES Windows, Linux, macOS, Android Dev Only, iOS Dev Only
+bash, git, mv, rm, tr, type, curl/wget, base64, sudo (if not root), make (GNU)
 tar (or unzip on OSX and Windows),
 gpg (optional verification)
 
