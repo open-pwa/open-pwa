@@ -1,5 +1,6 @@
 # Breaking NEWS
-Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on IOS Already.
+19.05.2021 - Google starts pwa Protocol Handler Registration support.
+20.09.2020 - Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on IOS Already.
 
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
