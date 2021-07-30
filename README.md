@@ -1,4 +1,5 @@
 # Breaking NEWS
+30.07.2021 - http://webcache.googleusercontent.com/search?q=cache:https://blog.logrocket.com/why-use-electron-alternative/&strip=1&vwsrc=0
 19.05.2021 - Google starts pwa Protocol Handler Registration support.
 20.09.2020 - Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on IOS Already.
 
