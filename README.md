@@ -167,3 +167,16 @@ ln -s ~/.pm2 ~/.open-pwa
 
 ## OpenPWA's relation to deployless
 OpenPWA is the foundation of @direktspeed/deployless it uses openpwa under the hood.
+
+## Diffrences between GUI App Methods
+- using own versions
+  - Electron uses a own nodejs version bundled with lib chrome both are older both are patched
+  - nwjs uses always the newst nodejs + chrome and is a chrome app that uses libnode.so
+- use the systems version
+  - carlo using pupeteer 
+  - playwright using the chrome dev protocol.
+- WiP! Experimental Researcg graalvm 
+  - glueon and smilar projects. allows interaction via libnode-graal.so later.
+
+## Missing parts
+Shortcut and Protocol DNS management.
