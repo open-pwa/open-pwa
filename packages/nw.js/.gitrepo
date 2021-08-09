@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:frank-dspeed/nw.js.git
+	branch = open-pwa
+	commit = 18299ec34ed610d75479497e2e21e99db2c0cf20
+	parent = ac0c32c9815f7270580877b21fcb5f335f362787
+	method = merge
+	cmdver = 0.4.3

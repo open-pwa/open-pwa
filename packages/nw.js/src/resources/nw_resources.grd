@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit latest_public_release="0" current_release="1">
+  <outputs>
+    <output filename="grit/nw_resources.h" type="rc_header" context="default_100_percent">
+      <emit emit_type='prepend'></emit>
+    </output>
+    <output filename="grit/nw_resources_map.cc" type="resource_map_source" context="default_100_percent"/>
+    <output filename="grit/nw_resources_map.h" type="resource_map_header" context="default_100_percent"/>
+    <output filename="nw_resources.pak" type="data_package" context="default_100_percent"/>
+  </outputs>
+  <release seq="1">
+    <structures fallback_to_low_resolution="true">
+      <structure type="chrome_scaled_image" name="IDR_NW_DEFAULT_ICON" file="nw.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_BACK" file="browser_back_normal.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_BACK_D" file="browser_back_disabled.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_BACK_H" file="browser_back_hover.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_BACK_P" file="browser_back_pressed.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_FORWARD" file="browser_forward_normal.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_FORWARD_D" file="browser_forward_disabled.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_FORWARD_H" file="browser_forward_hover.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_FORWARD_P" file="browser_forward_pressed.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_STOP" file="browser_stop_normal.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_STOP_D" file="browser_stop_disabled.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_STOP_H" file="browser_stop_hover.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_STOP_P" file="browser_stop_pressed.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_RELOAD" file="browser_reload_normal.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_RELOAD_D" file="browser_reload_disabled.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_RELOAD_H" file="browser_reload_hover.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_RELOAD_P" file="browser_reload_pressed.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_TOOLS" file="browser_tools_normal.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_TOOLS_H" file="browser_tools_hover.png" />
+      <structure type="chrome_scaled_image" name="IDR_NW_TOOLS_P" file="browser_tools_pressed.png" />
+    </structures>
+    <includes>
+      <include name="IDR_NW_VERSION" file="pages/nw_version.html" type="BINDATA" />
+      <include name="IDR_NW_BLANK" file="pages/nw_blank.html" type="BINDATA" />
+      <include name="IDR_NW_PACKAGE_ERROR" file="pages/package_error.html" type="BINDATA" />
+      <include name="IDR_NW_FATAL_ERROR" file="pages/fatal_error.html" type="BINDATA" />
+      <include name="IDR_NW_GPU" file="pages/nw_gpu.html" type="BINDATA" />
+      <include name="IDR_NW_DEVTOOLS_DISCOVERY_PAGE" file="pages/shell_devtools_discovery_page.html" type="BINDATA" />
+      <include name="IDR_NW_API_DISPATCHER_BINDINGS_JS" file="../api/dispatcher_bindings.js" type="BINDATA" />
+      <include name="IDR_NW_API_WINDOW_BINDINGS_JS" file="../api/window_bindings.js" type="BINDATA" />
+      <include name="IDR_NW_API_BASE_JS" file="../api/base/base.js" type="BINDATA" />
+      <include name="IDR_NW_API_MENUITEM_JS" file="../api/menuitem/menuitem.js" type="BINDATA" />
+      <include name="IDR_NW_API_MENU_JS" file="../api/menu/menu.js" type="BINDATA" />
+      <include name="IDR_NW_API_TRAY_JS" file="../api/tray/tray.js" type="BINDATA" />
+      <include name="IDR_NW_API_CLIPBOARD_JS" file="../api/clipboard/clipboard.js" type="BINDATA" />
+      <include name="IDR_NW_API_WINDOW_JS" file="../api/window/window.js" type="BINDATA" />
+      <include name="IDR_NW_API_SHELL_JS" file="../api/shell/shell.js" type="BINDATA" />
+      <include name="IDR_NW_API_APP_JS" file="../api/app/app.js" type="BINDATA" />
+      <include name="IDR_NW_API_SHORTCUT_JS" file="../api/shortcut/shorcut.js" type="BINDATA" />
+      <include name="IDR_NW_API_SCREEN_JS" file="../api/screen/screen.js" type="BINDATA" />
+      <if expr="pp_ifdef('enable_printing')">
+        <include name="IDR_PRINT_PREVIEW_PAGE" file="pages/print_preview_page.html" flattenhtml="true" allowexternalscript="false" type="BINDATA" />
+      </if>
+    </includes>
+    <messages fallback_to_english="true">
+      <message name="IDS_PRINT_PREVIEW_INVALID_PRINTER_SETTINGS" desc="Message to display when selected printer is not reachable or its settings are invalid.">
+        The selected printer is not available or not installed correctly.  Check your printer or try selecting another printer.
+      </message>
+      <!-- Print -->
+      <message name="IDS_DEFAULT_PRINT_DOCUMENT_TITLE" desc="Default title for a print document">
+        Untitled Document
+      </message>
+      <message name="IDS_PRINT_SPOOL_FAILED_TITLE_TEXT" desc="Title of a message box when printing fails because of printer issues.">
+        Print Failed
+      </message>
+      <message name="IDS_PRINT_SPOOL_FAILED_ERROR_TEXT" desc="Text in a messagebox when printing fails because of printer issues.">
+        Something went wrong when trying to print.  Please check your printer and try again.
+      </message>
+      <!-- Color chooser dialog default titles (only used on Linux) -->
+      <message name="IDS_SELECT_COLOR_DIALOG_TITLE" desc="The default title for the Select Color color chooser dialog.">
+        Select Color
+      </message>
+      <message name="IDS_IMAGE_FILES" desc="The description of the image file extensions in the select file dialog.">
+        Image Files
+      </message>
+      <message name="IDS_AUDIO_FILES" desc="The description of the audio file extensions in the select file dialog.">
+        Audio Files
+      </message>
+      <message name="IDS_VIDEO_FILES" desc="The description of the video file extensions in the select file dialog.">
+        Video Files
+      </message>
+      <message name="IDS_CUSTOM_FILES" desc="The description of the custom file extensions in the select file dialog.">
+        Custom Files
+      </message>
+    </messages>
+  </release>
+</grit>

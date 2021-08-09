@@ -1,0 +1,114 @@
+// Copyright 2015 The NW.js Authors. All rights reserved.
+// Use of this source code is governed by a MIT-style license that can be
+// found in the LICENSE file.
+
+// nw Window API
+namespace nw.Window {
+  callback CreateWindowCallback =
+      void ([instanceOf=NWWindow] object createdWindow);
+  callback EventCallback = void();
+  callback GetAllWinCallback = void (object[] windows);
+
+  callback CapturePageCallback = void (DOMString dataUrl);
+  [noinline_doc] dictionary CapturePageOptions {
+    [nodoc] DOMString? format;
+    [nodoc] DOMString? datatype;
+    [nodoc] long? quality;
+  };
+  [noinline_doc] dictionary CreateWindowOptions {
+    [nodoc] DOMString? id;
+    [nodoc] long? x;
+    [nodoc] long? y;
+    [nodoc] long? width;
+    [nodoc] long? height;
+    [nodoc] long? min_width;
+    [nodoc] long? min_height;
+    [nodoc] long? max_width;
+    [nodoc] long? max_height;
+    [nodoc] boolean? frame;
+    [nodoc] boolean? resizable;
+    [nodoc] boolean? fullscreen;
+    [nodoc] boolean? show;
+    [nodoc] boolean? always_on_top;
+    [nodoc] boolean? visible_on_all_workspaces;
+    [nodoc] boolean? transparent;
+    [nodoc] boolean? kiosk;
+    [nodoc] boolean? focus;
+    [nodoc] boolean? new_instance;
+    [nodoc] boolean? mixed_context;
+    [nodoc] boolean? show_in_taskbar;
+    [nodoc] DOMString? title;
+    [nodoc] DOMString? position;
+    [nodoc] DOMString? icon;
+    [nodoc] DOMString? inject_js_start;
+    [nodoc] DOMString? inject_js_end;
+  };
+
+  [noinline_doc] dictionary NWWindow {
+    // show devtools for the current window
+    static void showDevTools(optional any frm, optional EventCallback callback);
+    static void capturePage(optional CapturePageCallback callback, optional CapturePageOptions options);
+    static void show();
+    static void hide();
+    static void focus();
+    static void blur();
+    static void close(optional boolean force);
+    static void minimize();
+    static void maximize();
+    static void unmaximize();
+    static void restore();
+    static void setPosition(DOMString pos);
+    static void setMaximumSize(long width, long height);
+    static void setMinimumSize(long width, long height);
+    static void setResizable(boolean resizable);
+    static void enterFullscreen();
+    static void leaveFullscreen();
+    static void toggleFullscreen();
+    static void setVisibleOnAllWorkspaces(boolean all_visible);
+    static bool canSetVisibleOnAllWorkspaces();
+    static void on(DOMString event,
+                   EventCallback callback);
+    static void once(DOMString event,
+                     EventCallback callback);
+    static void removeListener(DOMString event,
+                               EventCallback callback);
+    static void removeAllListeners(DOMString event);
+    static void reload();
+    static void reloadIgnoringCache();
+
+    static void eval(object frame, DOMString script);
+    static void evalNWBin(object frame, DOMString path);
+    static void evalNWBinModule(object frame, DOMString path, DOMString module_path);
+    static void print(optional object options);
+
+    object appWindow;
+    object cWindow;
+    object window;
+    object menu;
+    long x;
+    long y;
+    long width;
+    long height;
+    double zoomLevel;
+    DOMString title;
+    long frameId;
+  };
+  interface Functions {
+    // get the current window
+    [nocompile] static NWWindow get(optional object domWindow);
+    [nocompile] static void getAll(GetAllWinCallback callback);
+    [nocompile] static void open(DOMString url,
+                                 optional CreateWindowOptions options,
+                                 optional CreateWindowCallback callback);
+
+  };
+  interface Events {
+    [nocompile] static void onNewWinPolicy();
+    [nocompile] static void onNavigation();
+    [nocompile] static void LoadingStateChanged();
+    [nocompile] static void onDocumentStart();
+    [nocompile] static void onDocumentEnd();
+    [nocompile] static void onZoom();
+    [supportsFilters=true] static void onClose();
+  };
+};

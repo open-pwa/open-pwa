@@ -1,0 +1,5 @@
+{
+    "name":"test",
+    "main": "index.html",
+    "expect_dir_exists": "exited"
+}
