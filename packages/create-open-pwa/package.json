@@ -1,0 +1,28 @@
+{
+  "name": "create-open-pwa",
+  "version": "0.0.0-pre1",
+  "description": "the main open pwa installer",
+  "main": "create-open-pwa.js",
+  "scripts": {
+    "test": "mocha --ui tdd test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-pwa/open-pwa.git"
+  },
+  "keywords": [
+    "open-pwa",
+    "platform",
+    "mobile-apps",
+    "apps"
+  ],
+  "author": "Frank Lemanschik <frank@lemanschik.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/open-pwa/open-pwa/issues"
+  },
+  "homepage": "https://github.com/open-pwa/open-pwa#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
