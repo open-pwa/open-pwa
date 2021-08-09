@@ -1,0 +1,13 @@
+resources:
+  containers:
+  - container: arm32v7-test-container
+    image: electron.azurecr.io/build:arm32v7-ca93c6a7bc49e7d2a7b8c62ed04e0b870f3dfd1e
+    options: --shm-size 128m
+
+jobs:
+- job: Test_Arm32v7
+  container: arm32v7-test-container
+  displayName: Test Arm on Arm32v7 hardware
+  timeoutInMinutes: 30
+  steps:
+  - template: vsts-arm-test-steps.yml

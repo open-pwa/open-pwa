@@ -1,0 +1,13 @@
+resources:
+  containers:
+  - container: arm64v8-test-container
+    image: electron.azurecr.io/arm64v8-ca93c6a7bc49e7d2a7b8c62ed04e0b870f3dfd1e
+    options: --shm-size 128m
+
+jobs:
+- job: Test_Arm64
+  container: arm64v8-test-container
+  displayName: Test Arm64 on Arm64 hardware
+  timeoutInMinutes: 30
+  steps:
+  - template: vsts-arm-test-steps.yml

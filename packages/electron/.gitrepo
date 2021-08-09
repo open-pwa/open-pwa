@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:frank-dspeed/electron.git
+	branch = open-pwa
+	commit = 66c458a3530ed857955eb285700156b00bfc0271
+	parent = 6972d560e4dfd09718541b682dba11e0ef77378e
+	method = merge
+	cmdver = 0.4.3
