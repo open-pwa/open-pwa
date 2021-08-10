@@ -1,0 +1,16 @@
+<html><head>
+  <title>snapshot demo</title>
+</head>
+<body>
+  <script>
+    nw.Window.get().evalNWBin(null, 'mytest.bin');
+  </script>
+  <script>
+    mytest(2);
+    document.write('<p id="result2">' + mytest.toString() + '</p>');
+    console.log('<p id="result2">' + mytest.toString() + '</p>');
+    testinner(2);
+    document.write('<p id="result4">' + testinner.toString() + '</p>');
+    console.log('<p id="result4">' + testinner.toString() + '</p>');
+  </script>
+</body></html>

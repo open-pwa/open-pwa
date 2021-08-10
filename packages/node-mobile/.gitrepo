@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:frank-dspeed/nodejs-mobile.git
+	branch = open-pwa
+	commit = 73d5d375dbd672c3df8556a83ad122a078d21ed2
+	parent = 00037ee8de6858d3fffa814df3c292167e9074c3
+	method = merge
+	cmdver = 0.4.3

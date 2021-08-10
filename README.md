@@ -1,5 +1,7 @@
 # Breaking NEWS
-Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on iOS Already.
+30.07.2021 - http://webcache.googleusercontent.com/search?q=cache:https://blog.logrocket.com/why-use-electron-alternative/&strip=1&vwsrc=0
+19.05.2021 - Google starts pwa Protocol Handler Registration support.
+20.09.2020 - Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on iOS Already.
 
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
@@ -165,3 +167,16 @@ ln -s ~/.pm2 ~/.open-pwa
 
 ## OpenPWA's relation to deployless
 OpenPWA is the foundation of @direktspeed/deployless it uses openpwa under the hood.
+
+## Diffrences between GUI App Methods
+- using own versions
+  - Electron uses a own nodejs version bundled with lib chrome both are older both are patched
+  - nwjs uses always the newst nodejs + chrome and is a chrome app that uses libnode.so
+- use the systems version
+  - carlo using pupeteer 
+  - playwright using the chrome dev protocol.
+- WiP! Experimental Researcg graalvm 
+  - glueon and smilar projects. allows interaction via libnode-graal.so later.
+
+## Missing parts
+Shortcut and Protocol DNS management.

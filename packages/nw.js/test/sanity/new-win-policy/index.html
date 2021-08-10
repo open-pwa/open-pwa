@@ -1,0 +1,24 @@
+<html>
+<head>
+<title></title>
+<script>
+var win = nw.Window.get();
+win.on('new-win-policy', function(frame, url, policy) { 
+  console.log("new-win-policy called: " + url); 
+  if (url.includes('checksize.html'))
+    policy.setNewWindowManifest({width: 321, height: 123});
+  else
+    policy.setNewWindowManifest({'frame': false, 'inject_js_start': 'start.js', 'inject_js_end':'end.js'});
+  //policy.forceCurrent();
+});
+win.on('navigation', function(frame, url, policy, context) { 
+  console.log("navigation called: " + url + ", " + context); 
+  //policy.ignore();
+});
+</script>
+</head>
+<body>
+<a href="target.html" target="_blank" id="lnk_target">new window</a>
+<a href="checksize.html" target="_blank" id="lnk_checksize">new window with size</a>
+</body>
+</html>

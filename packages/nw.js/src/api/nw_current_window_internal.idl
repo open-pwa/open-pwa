@@ -1,0 +1,51 @@
+// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// This is used by the NW window API internally to pass through messages to
+// the shell window.
+[implemented_in="content/nw/src/api/nw_window_api.h"]
+namespace nw.currentWindowInternal {
+  callback CapturePageCallback = void (DOMString dataUrl);
+  callback ShowDevToolsCallback = void ();
+  callback GetPrintersCallback = void (object[] printers);
+  [noinline_doc] dictionary CapturePageOptions {
+    [nodoc] DOMString? format;
+    [nodoc] DOMString? datatype;
+    [nodoc] long? quality;
+  };
+
+  dictionary MenuPatch {
+    long menu;
+    long index;
+    object option;
+  };
+
+  interface Functions {
+    static void close(optional boolean force, optional long id);
+    static void setShadowInternal(boolean shadow, optional long id);
+    static void showDevToolsInternal(optional ShowDevToolsCallback callback);
+    static void showDevTools2Internal(long id, optional ShowDevToolsCallback callback);
+    static void closeDevTools();
+    static void setBadgeLabelInternal(DOMString badge, optional long id);
+    static void requestAttentionInternal(long count);
+    static void setProgressBarInternal(double progress, optional long id);
+    static void enterKioskModeInternal(optional long id);
+    static void leaveKioskModeInternal(optional long id);
+    static void toggleKioskModeInternal(optional long id);
+    static bool isKioskInternal(optional long id);
+    static void capturePageInternal(long id, optional CapturePageOptions options, optional CapturePageCallback callback);
+    static void clearMenu(optional long win);
+    static MenuPatch[] setMenu(long id, optional long winId);
+    static void reloadIgnoringCache();
+    static double getZoom(optional long winId);
+    static void setZoom(double level, optional long winId);
+    static void setShowInTaskbarInternal(boolean show, optional long id);
+    static DOMString getTitleInternal(optional long winId);
+    static void setTitleInternal(DOMString title, optional long winId);
+    static object getWinParamInternal();
+    static object getCurrent(long id, optional object getInfo);
+    static void getPrinters(GetPrintersCallback callback);
+    static void setPrintSettingsInternal(optional object options, optional long id);
+  };
+};
