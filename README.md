@@ -1,7 +1,7 @@
 # Breaking NEWS
-30.07.2021 - http://webcache.googleusercontent.com/search?q=cache:https://blog.logrocket.com/why-use-electron-alternative/&strip=1&vwsrc=0
-19.05.2021 - Google starts pwa Protocol Handler Registration support.
-20.09.2020 - Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on iOS Already.
+- 30.07.2021 - http://webcache.googleusercontent.com/search?q=cache:https://blog.logrocket.com/why-use-electron-alternative/&strip=1&vwsrc=0
+- 19.05.2021 - Google starts pwa Protocol Handler Registration support.
+- 20.09.2020 - Epic Games has started war on Apple to open the ecosystem even more wide while we can already. With OpenPwa that is not even needed as you get the ability to run your code on iOS Already.
 
 # OPEN-PWA Platform turns any device into a Cloud!
 Get Reach and Power with your Hybrid Apps on any Device and Scale! A Universal Entire Operating System Platform Interface and Framework!
@@ -19,9 +19,32 @@ It can change everything as a Open Platform to port your existing software or cr
 It Also Offers its own Formart for Cloud Deployments any device can be part of any cloud or its own cloud.
 Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
-## How does it WORK?
-Open Pwa is a Platform build with the @stealify/stealify Framework the EE Encapsulation Standard OpenPwa also offers some high level tooling also build with stealify to package and deploy your code via vmpack and vmdeploy (deployless)
+## Downloads
 
+Open PWA ships as self containing installer that then switches to its own package management system so you do not need to handle updates yourself
+while the installer supports a "no-update" option in that case you can handle updates how you like it even via a own open-pwa-<service>
+  
+Download the right installer for your OS
+
+v0.55.0: (Aug 1, 2021, based off of Node.js v16.4.2, Chromium 92.0.4515.107) : release notes
+NOTE You might want the SDK build. Please read the release notes.
+
+Linux: 32bit / 64bit
+
+Windows: 32bit / 64bit
+
+Mac 10.10+: 64bit
+
+Use "Legacy build" for Win XP and early OSX.
+
+latest nightly build from git tip: https://github.com/open-pwa/live-build/releases
+  
+Android: use the Android Store or git clone this repo and follow the android build instructions
+  
+iOS: use the ios store or git clone this repo and follow the iOS build instructions
+
+## How does it WORK?
+Open Pwa is a Platform build with the @stealify/stealify Framework the EE Encapsulation Standard Open PWA also offers some high level tooling also build with stealify to package and deploy your code via vmpack and vmdeploy (deployless).
 
 ## https://oam.dev/
 An App-centric Model
@@ -152,21 +175,21 @@ gpg (optional verification)
 ## Development Linux
 Use existing n and pm2 installs maybe create a seperated user profile for testing
 
+for packaging use -a arm64 or x64 all the nodejs build flavors by default matching current platform.
+  
+  
 ```bash
+# Fresh install
+curl -sL https://git.io/open-pwa-install | OPEN_PWA_HOME=~/.open-pwa bash -s -- -y -n
+
+## Link existing installs  
 mkdir ~/.open-pwa
 ln -s ~/n ~/.open-pwa
 ln -s ~/.pm2 ~/.open-pwa
 ```
 
-## Supported Package Formarts 
-- appimage
-- docker
-- tar.gz
-- git
-- serviceWorker
-
 ## OpenPWA's relation to deployless
-OpenPWA is the foundation of @direktspeed/deployless it uses openpwa under the hood.
+OpenPWA is the foundation of @direktspeed/deployless it uses open-pwa under the hood.
 
 ## Diffrences between GUI App Methods
 - using own versions
@@ -179,4 +202,15 @@ OpenPWA is the foundation of @direktspeed/deployless it uses openpwa under the h
   - glueon and smilar projects. allows interaction via libnode-graal.so later.
 
 ## Missing parts
-Shortcut and Protocol DNS management.
+Shortcut and Protocol DNS management. while we could intercept that maybe on sandbox level? Inside the app?
+  
+## Supported Package Formarts 
+- appimage
+- docker
+- tar.gz
+- git
+- serviceWorker
+  
+  
+## Commercial Offer
+If you have BOYD Bring your own device enrolled in your company you can install 
