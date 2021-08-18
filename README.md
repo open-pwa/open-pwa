@@ -19,6 +19,12 @@ It can change everything as a Open Platform to port your existing software or cr
 It Also Offers its own Formart for Cloud Deployments any device can be part of any cloud or its own cloud.
 Platform by providing the needed API's to legacy Platforms a dropin replacement for the electron framework that scales more well when multiple applications get executed on the same host. It offers a Total new way of Deployment and Application update concepts.
 
+## Free Open Source P2P Community Foundation owned!
+While i am at present the only one working here it is intended to move this Later to a Open PWA Foundation and maybe partial Apache and OpenJs
+we can not transfer this complet to them as they do not fully complai with our Ethics of fast forward Development
+This Project has a Complex Mindset behind it. While i think every one will love and use this 
+
+
 ## Downloads
 
 Open PWA ships as self containing installer that then switches to its own package management system so you do not need to handle updates yourself
@@ -77,13 +83,13 @@ There is a discussion in https://news.ycombinator.com/item?id=18355345 which sho
 - [x] docker
 - [x] nodejs (Including Java InterOp via node-graalvm)
 - [x] os nativ apps
-- [ ] nodejs-mobile
+- [x] cordova-nodejs-mobile
 - [ ] wasmer
 - [ ] weex
 - [ ] QT
 - [ ] wxWidgets
 - [x] deno
-- [ ] cordova
+- [x] cordova
 
 ## Permissions - Application based Permissions on the Host
 
@@ -115,6 +121,14 @@ so this will be a single daemon or app or server it is not so important how we n
 The Implementation will be written in JS using GraalVM with Stealify to get it even more embedded able while keeping the code understandable by all ECMAScript knowing people,
 
 ## Concepts open-pwa runtime
+  
+- open-pwa indipendent collection of packages that run on all platforms or the single platform they represent
+  - service-manager (Is the Main Entrypoint for the open-pwa-manager)
+  - permissions
+  - serviceWorker-api The main installer api for open-pwa-apps
+  - buildscripts for open-pwa-installers
+- cordova-plugin-webserver
+- cordova-platform-open-pwa inhires cordova as we are compatible
 - open-pwa runtime runs on a remote host or the local desktop pc look into amino.run 
 - It offers a service worker deployment interface open-pwa://my-app-id and <protocol>://open-pwa/my-app-id that exposes *.<my-app-id> 
     - additional on ip:port for restricted deployments without access to dns or host protocol services.
@@ -194,23 +208,42 @@ OpenPWA is the foundation of @direktspeed/deployless it uses open-pwa under the 
 ## Diffrences between GUI App Methods
 - using own versions
   - Electron uses a own nodejs version bundled with lib chrome both are older both are patched
-  - nwjs uses always the newst nodejs + chrome and is a chrome app that uses libnode.so
+  - nwjs uses always the newst nodejs + chrome and is a chrome app that glues libnode.so together.
 - use the systems version
   - carlo using pupeteer 
   - playwright using the chrome dev protocol.
-- WiP! Experimental Researcg graalvm 
+- WiP! Experimental Research graalvm 
   - glueon and smilar projects. allows interaction via libnode-graal.so later.
 
 ## Missing parts
 Shortcut and Protocol DNS management. while we could intercept that maybe on sandbox level? Inside the app?
   
 ## Supported Package Formarts 
-- appimage
-- docker
-- tar.gz
-- git
 - serviceWorker
+  - appimage
+  - docker
+  - tar.gz
+  - git
   
   
 ## Commercial Offer
-If you have BOYD Bring your own device enrolled in your company you can install 
+If you have BOYD Bring your own device enrolled in your company you can install our Enterpise versions via your Local iOS Deployment and management Servers and or Android / Fuchsia Deployment servers. 
+  
+  
+We Can help you to streamline your development process. Simply leave us a message.
+  
+
+## Run
+  
+```
+open-pwa run "pathOrUrl/serviceworker.js"
+```
+  
+serviceWorker.js  
+```
+export const registerServiceWorker = {
+  ...hooks
+}
+```
+
+
