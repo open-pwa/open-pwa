@@ -1,3 +1,10 @@
+## open-pwa standart
+Trying to generate a standardt for browser like server deployments
+
+- Web Worker API
+- Minimim Browser API
+- Browser Addon that allows Native installs as also handels post message routing (native messaging api)
+
 # Breaking NEWS
 - 11.02.2022 - Open PWA Gets less Focus as the new Focus is on [@internet-of-presence/IoP](https://github.com/internet-of-presence/IoP) A Total new Internet 4.0
 - 30.07.2021 - http://webcache.googleusercontent.com/search?q=cache:https://blog.logrocket.com/why-use-electron-alternative/&strip=1&vwsrc=0
